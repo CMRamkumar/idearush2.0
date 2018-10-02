@@ -1,0 +1,27 @@
+.ir-page-title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 24px;
+  text-transform: uppercase;
+  outline: none;
+}
+.ir-page-title:hover {
+  color:#f7631b;
+}
+
+.logo-img {
+  width: 30px;
+  height: 30px;
+}
+
+.section-gap2 {
+  padding: 60px 0;
+}
+
+.mar-b5 {
+  margin-bottom: 5px;
+}
+
+textarea {
+  min-height: 150px;
+}
