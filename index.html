@@ -217,25 +217,29 @@
 							</p>
 						</div>
 						<div class="col-lg-4 col-md-6 search-course-right section-gap">
-							<form class="form-wrap" action="#">
+							<div class="form-wrap">
 								<h4 class="text-white pb-20 text-center mb-30">Submit your ideas here!!!</h4>
-								<input type="text" class="form-control" name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" >
-								<input type="phone" class="form-control" name="phone" placeholder="Your Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'" >
-								<input type="email" class="form-control" name="email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'" >
+								<div class="single-footer-widget hide" id="ir-error">
+									<p class="info error">Please fill in all the fields</p>
+								</div>
+								<input type="text" class="form-control" id="ir-emp-id" name="employeeid" placeholder="Your TCS employee ID" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your TCS employee ID'" >
+								<input type="text" class="form-control" id="ir-name" name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" >
+								<input type="phone" class="form-control" id="ir-phone" name="phone" placeholder="Your Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'" >
+								<input type="email" class="form-control" id="ir-email" name="email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'" >
 								<div class="form-select mar-b5" id="service-select">
 									<select>
-										<option datd-display="">Choose a Theme</option>
-										<option value="1">Customer experience</option>
-										<option value="2">Efficient Bank</option>
-										<option value="3">Digital technology</option>
-										<option value="4">Data</option>
-										<option value="5">Leading Innovation</option>
-										<option value="6">Digital Building blocks</option>
+										<option>Choose a Theme</option>
+										<option data-value="Customer experience">Customer experience</option>
+										<option data-value="Efficient Bank">Efficient Bank</option>
+										<option data-value="Digital technology">Digital technology</option>
+										<option data-value="Data">Data</option>
+										<option data-value="Leading Innovation">Leading Innovation</option>
+										<option data-value="Digital Building blocks">Digital Building blocks</option>
 									</select>
 								</div>
-								<textarea type="text" class="form-control" name="idea" placeholder="Your idea..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your idea...'" ></textarea>
-								<button class="primary-btn text-uppercase">Submit</button>
-							</form>
+								<textarea type="text" id="ir-idea" class="form-control" name="idea" placeholder="Your idea..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your idea...'" ></textarea>
+								<button class="primary-btn text-uppercase" id="submit-idea">Submit</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -254,13 +258,12 @@
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 			<script src="js/vendor/bootstrap.min.js"></script>
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-  			<script src="js/easing.min.js"></script>
+  		<script src="js/easing.min.js"></script>
 			<script src="js/hoverIntent.js"></script>
 			<script src="js/superfish.min.js"></script>
 			<script src="js/jquery.ajaxchimp.min.js"></script>
 			<script src="js/jquery.magnific-popup.min.js"></script>
-    		<script src="js/jquery.tabs.min.js"></script>
+    	<script src="js/jquery.tabs.min.js"></script>
 			<script src="js/jquery.nice-select.min.js"></script>
 			<script src="js/owl.carousel.min.js"></script>
 			<script src="js/mail-script.js"></script>
