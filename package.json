@@ -1,0 +1,23 @@
+{
+  "name": "idearush2.0",
+  "version": "1.0.0",
+  "description": "Web application created for Idearush",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CMRamkumar/idearush2.0.git"
+  },
+  "author": "Ramkumar M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CMRamkumar/idearush2.0/issues"
+  },
+  "homepage": "https://github.com/CMRamkumar/idearush2.0#readme",
+  "dependencies": {
+    "mongodb": "^3.1.6",
+    "requirejs": "^2.3.6"
+  }
+}
