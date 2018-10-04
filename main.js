@@ -16,7 +16,7 @@ app.post('/insert/data', function(req, res){
   var data = req.body;
   console.log(data);
   var MongoClient = require('mongodb').MongoClient;
-  var uri = "mongodb+srv://" + process.env.ACCESS_NAME + ":" + process.env.ACCESS_CODE + "@idearush2-i1vog.mongodb.net/Idearush2?retryWrites=true";
+  var uri = "mongodb+srv://cmramkumar:cu8zRAPUcZQuFNCB@idearush2-i1vog.mongodb.net/Idearush2?retryWrites=true";
   MongoClient.connect(uri, function(err, client) {
      const collection = client.db("Idearush2").collection("idearush");
      collection.insertOne(data).then(function(result) {
