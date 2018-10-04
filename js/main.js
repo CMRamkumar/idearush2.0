@@ -290,36 +290,37 @@ $(document).ready(function() {
           return false;
         };
         $('#ir-error').hide();
+        $('#submit-success').hide();
         $(document).on('click', '.option', function(event) {
           $('#service-select').attr('data-selectval', $(event.currentTarget).attr('data-value'));
         });
         $('#submit-idea').on('click', function (event) {
-          var empId = $.trim($('#ir-emp-id').val());
           var name = $.trim($('#ir-name').val());
-          var phone = $.trim($('#ir-phone').val());
-          var email = $.trim($('#ir-email').val());
           var idea = $.trim($('#ir-idea').val());
           var theme = $('#service-select').attr('data-selectval');
-          if (isEmpty(empId) || isEmpty(name) || isEmpty(phone) || isEmpty(email) || isEmpty(theme) || isEmpty(idea)) {
+          if (isEmpty(name) || isEmpty(theme) || isEmpty(idea)) {
             $('#ir-error').show();
             $("html, body").animate({ scrollTop: $('#ir-form').offset().top }, "slow");
           } else {
+            $('#ir-error').hide();
             $.ajax({
         			type : "POST",
         			contentType : "application/json",
         			url : window.location + "insert/data",
         			data : JSON.stringify({
-                "employeeId": empId,
                 "name": name,
-                "phone": phone,
-                "email": email,
                 "theme": theme,
                 "idea": idea
               }),
         			dataType : 'json',
         			success : function(res) {
-                console.log(res);
-        				console.log("inserted successfully");
+                $('#ir-name').val('');
+                $('#ir-idea').val('');
+                $('#service-select').find('option:first').click();
+                $('#submit-success').show();
+                setTimeout(function () {
+                  $('#submit-success').hide(800);
+                }, 3000);
         			},
         			error : function(e) {
         				console.log("ERROR: ", e);
