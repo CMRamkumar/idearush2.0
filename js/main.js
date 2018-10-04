@@ -316,8 +316,9 @@ $(document).ready(function() {
         			success : function(res) {
                 $('#ir-name').val('');
                 $('#ir-idea').val('');
-                $('#service-select').find('option:first').click();
-                $('#submit-success').show();
+                $('.nice-select').click();
+                $('#service-select').find('li:first').click();
+                $('#submit-success').show(800);
                 setTimeout(function () {
                   $('#submit-success').hide(800);
                 }, 3000);
